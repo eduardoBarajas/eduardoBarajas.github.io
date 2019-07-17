@@ -5,20 +5,30 @@ function navClick(tag) {
     var src = '';
     switch (tag) {
         case 'home': src = 'home.html'; break;
-        case 'about': src = 'about.html'; break;
-        case 'contact': src = 'contact.html'; break;
-        case 'portafolio': src = 'portfolio.html'; break;
+        case 'about': alert('En desarrollo.'); break; //src = 'about.html'; break;
+        case 'contact': alert('En desarrollo.'); break; // src = 'contact.html'; break;
+        case 'portafolio': alert('En desarrollo.'); break; // src = 'portfolio.html'; break;
     }
-    var iframe = document.getElementById('content-container');
-    iframe.src = src;
-    iframe.classList.remove('fadeInLeft');
-    iframe.classList.add('fadeOutRight');
-    setTimeout( () => {
-        iframe.classList.remove('fadeOutRight');
-        iframe.classList.add('fadeInLeft');
-    }, 100);
+    if (src !== '') {
+        var iframe = document.getElementById('content-container');
+        iframe.src = src;
+        iframe.classList.remove('fadeInLeft');
+        iframe.classList.add('fadeOutRight');
+        setTimeout( () => {
+            iframe.classList.remove('fadeOutRight');
+            iframe.classList.add('fadeInLeft');
+        }, 100);
+    }
 }
 
-function proyectoSeleccionado(id) {
-    
+function websiteClick(site) {
+    if (site !== '#') {
+        window.open(site);
+    } else {
+        alert('En desarrollo.');
+    }
+}
+
+function moreClick(id) {
+    alert('En desarrollo.');
 }
