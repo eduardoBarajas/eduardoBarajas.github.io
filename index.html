@@ -15,6 +15,7 @@
   <link href="styles/main.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body id="top">
@@ -26,16 +27,18 @@
         <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font" style="max-width: 100%;">
           <img src="img/logo.png" style="padding-bottom: 10px;">
           <a class="mdl-navigation__link" href="#" onclick="navClick('home')">Inicio</a>
-            <a class="mdl-navigation__link" href="#" onclick="navClick('about')">Acerca De Mi</a><a class="mdl-navigation__link"
-            href="#" onclick="navClick('contact')">Contacto</a>
+          <a class="mdl-navigation__link" href="#" onclick="navClick('portafolio')">Portafolio</a>
+          <a class="mdl-navigation__link" href="#" onclick="navClick('about')">Acerca De Mi</a>
+          <a class="mdl-navigation__link" href="#" onclick="navClick('contact')">Contacto</a>
         </nav>
       </div>
     </header>
     <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-      <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font"><a class="mdl-navigation__link"
-        href="#" onclick="navClick('home')">Inicio</a><a
-          class="mdl-navigation__link" href="#" onclick="navClick('about')">Acerca De Mi</a><a class="mdl-navigation__link"
-          href="#" onclick="navClick('contact')">Contacto</a>
+      <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+        <a class="mdl-navigation__link" href="#" onclick="navClick('home')">Inicio</a>
+        <a class="mdl-navigation__link" href="#" onclick="navClick('portafolio')">Portafolio</a>
+        <a class="mdl-navigation__link" href="#" onclick="navClick('about')">Acerca De Mi</a>
+        <a class="mdl-navigation__link" href="#" onclick="navClick('contact')">Contacto</a>
       </nav>
     </div>
     <iframe src="home.html" class="h-100 animated slow" id="content-container" allow-same-origin></iframe>
@@ -47,6 +50,9 @@
       $(document).ready(e => {
         $(document).bind('portafolioClick', function(e) {
           navClick('portafolio');
+        });
+        $(document).bind('projectClicked', function(e) {
+          showProject();
         });
       });
     </script>

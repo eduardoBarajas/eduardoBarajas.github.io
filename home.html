@@ -17,10 +17,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="scripts/require.js"></script>
   <script src="scripts/projectLoader.js"></script>
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
-<body id="top" onload="loadProjects()">
+<body id="top" onload="loadProjects(3)">
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"><a href="contact.html" id="contact-button"
       class="mdl-button mdl-button--fab mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-shadow--4dp"><i
         class="material-icons">mail</i></a>
@@ -38,10 +37,9 @@
                 <h2 class="mdl-card__title-text">Acerca de mi</h2>
               </div>
               <div class="mdl-card__supporting-text text-justify">
-                Mi nombre es Eduardo Barajas Melgoza y soy un recien graduado de la carrera de Ingenieria En Computacion de UABC, me considero un individuo con habilidades para trabajar en equipo, no le tengo miedo al trabajo bajo presión,
-                seguido intento tener iniciativa para crear o mejorar las cosas y me gusta formar parte de la toma de decisiones,
-                no me gusta estar estancado en lo mismo por mucho tiempo, me gusta aprender cosas nuevas constantemente, y actualmente
-                estoy esforzandome por realizar mis metas y obtener mayor experiencia laboral para seguir mejorando.
+                Soy Eduardo Barajas Melgoza un recien graduado de la carrera de Ingenieria En Computacion de UABC, me considero un individuo con habilidades para trabajar en equipo que no le tiene miedo 
+                al trabajo bajo presión ni a la toma de decisiones, seguido intento tener iniciativa para crear o mejorar las cosas,
+                no me gusta estar estancado en lo mismo por mucho tiempo, me gusta aprender cosas nuevas constantemente.
               </div>
               <div class="mdl-card__actions  mdl-card--border">
                 <a href="#"
@@ -62,7 +60,7 @@
       <footer class="mdl-mini-footer">
         <div class="footer-container">
           <ul class="mdl-mini-footer__link-list">
-            <li><a href="#">Derechos Reservados: Eduardo Barajas Melgoza 2019</a></li>
+            <li><a href="#">Derechos Reservados: Eduardo Barajas Melgoza 2019.</a></li>
           </ul>
         </div>
       </footer>
@@ -77,6 +75,10 @@
                 parent.$('body').trigger( 'portafolioClick' );
             });
         });
+        function moreClick(id) {
+            sessionStorage.setItem('currentProjectIndex', id);
+            parent.$('body').trigger('projectClicked');
+        }
     </script>
   </div>
 </body>
